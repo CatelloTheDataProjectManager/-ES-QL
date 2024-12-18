@@ -45,6 +45,3 @@ ES|QL is a powerful tool that combines the familiarity of SQL with the flexibili
 - Quickly meet data analysis needs.
 - Build robust ingestion and enrichment pipelines.
 - Create meaningful visualizations that drive better decision-making.
-
-## Contact
-For more information or to collaborate on projects involving ES|QL and Big Data, feel free to reach out.
