@@ -2,6 +2,8 @@
 
 This document highlights my expertise in using ES|QL (Elasticsearch SQL) to analyze and manipulate large-scale data, along with my experience in the Elasticsearch and Kibana ecosystem.
 
+*****Throughout my professional career, I have implemented new data extraction solutions in various companies to address the rapid growth of data. The existing systems often struggled to handle the increasing volume and complexity of information. By adopting these new solutions, I have been able to enhance data management practices, improve query performance, and achieve more robust analytics capabilities. These upgrades have enabled more effective data extraction, processing, and analysis, ultimately driving better business insights and supporting the evolving needs of the organizations.*****
+
 ## Overview of My Skills
 
 ### 1. **Proficiency in ES|QL**
