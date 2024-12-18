@@ -1,4 +1,4 @@
-# ES|QL and Big Data
+# ES|QL
 
 <img src="https://github.com/CatelloTheDataProjectManager/Elasticsearch/blob/main/elasticsearch.png" alt="Elasticsearch" width="250"/>
 
