@@ -82,6 +82,8 @@ POST _enrich/policy/enrich-orders-with-price/_execute
 - Saving and reusing ES|QL queries in Kibana to create custom dashboards.
 - Building powerful visualizations by combining ES|QL with advanced Kibana features.
 
+![kibana_image](https://github.com/CatelloTheDataProjectManager/Elasticsearch/blob/main/image_kibana.png)
+
 ### 6. **Big Data Project Management**
 - Integrating ES|QL into complex analytical pipelines to address Big Data use cases, such as log analysis, performance monitoring, and anomaly detection.
 - Optimizing query and transformation performance to handle large-scale datasets efficiently.
