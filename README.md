@@ -21,6 +21,15 @@ This document highlights my expertise in using ES|QL (Elasticsearch SQL) to anal
 - Utilizing aggregations such as **`stats...by`** to group and synthesize large datasets.
 - Expertise with **`auto_bucket`** for generating dynamic histograms.
 
+```ESQL
+from kibana_sample_data_flights
+| where FlightDelay
+| keep Carrier, FlightNum, DistanceMiles, FlightDelayMin
+| eval distance_buckets = auto_bucket(DistanceMiles, 20, 0, 20000)
+| stats delay = sum(FlightDelayMin) by distance_buckets, Carrier
+| sort Carrier
+```
+
 ### 3. **Data Enrichment**
 - Creating and managing enrichment policies to add metadata from external indices in real-time.
 - Seamlessly integrating enrichments into query pipelines for efficient result enhancement.
@@ -28,6 +37,45 @@ This document highlights my expertise in using ES|QL (Elasticsearch SQL) to anal
 ### 4. **Data Ingestion and Structuring**
 - Configuring mappings to structure data according to analytical needs.
 - Ingesting large volumes of data using APIs like **_bulk** to optimize performance.
+
+```ESQL
+PUT products
+    {
+        "mappings": {
+            "properties": {
+            "product_name": {
+                "type": "keyword"
+            },
+            "price": {
+                "type": "double"
+            }
+            }
+        }
+    }
+
+POST products/_bulk
+    {"index": {"_id": "1"}}
+    {"name": "apple", "price": 3.50}
+    {"index": {"_id": "2"}}
+    {"name": "orange", "price": 2.50}
+    {"index": {"_id": "3"}}
+    {"name": "pineapple", "price": 5.50}
+    {"index": {"_id": "4"}}
+    {"name": "watermelon", "price": 8.50}
+
+PUT _enrich/policy/enrich-orders-with-price
+    {
+        "match": {
+            "indices": "products",
+            "match_field": "name",
+            "enrich_fields": [
+                "price"
+            ]
+        }
+    }
+
+POST _enrich/policy/enrich-orders-with-price/_execute
+```
 
 ### 5. **Visualization and Exploration in Kibana**
 - Proficient in using **Kibana Discover** for interactive data exploration and visualization.
